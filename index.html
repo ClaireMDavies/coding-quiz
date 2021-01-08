@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--bootstrap link added-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Code Quiz</title>
+</head>
+<body>
+    <!--Setting up the grid structure for page-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h6>Hi Scores</h6>
+            </div>
+            <div class="col-sm-6">
+                <div class="start-quiz">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="card-title">Coding Quiz Challenge</h1>
+                            <p class="card-text">Click "start quiz" to answer 5 multiple choice questions, your score is the countdown timer, which has 10 seconds deducted for each wrong answer, the quiz is over when you have answered all questions or run out of time.</p>
+                            <a href="#" class="btn btn-success">Start Quiz</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <h6> Time remaining</h6>
+                <div id="timer">75</div>
+            </div>
+        </div>
+    </div>
+    
+    <!--questions for the quiz-->
+    <div class="col-sm-6">
+        <div class="question1">
+            <div class="card">
+                <div class="card-body">
+                    <h1> Question One</h1>
+                    <p>What are the types of pop up boxes available in JavaScript?</p>
+                    <ol>
+                        <li id="question1Answer1"><a href="#" class="btn btn-success">Alert</a></li>
+                        <li id="question1Answer2"><a href="#" class="btn btn-success">Prompt</a></li>
+                        <li id="question1Answer3"><a href="#" class="btn btn-success">Confirm</a></li>
+                        <li id="question1Answer4"><a href="#" class="btn btn-success">All of the above</a></li>
+                    </ol>
+                </div>
+         </div>
+        </div>
+    </div>
+    
+    <div class="col-sm-6">
+        <div class="question2">
+            <div class="card">
+                <div class="card-body">
+                    <h1> Question Two</h1>
+                    <p>Which of these is not a looping structure in JavaScript?</p>
+                    <ol>
+                        <li id="question2Answer1"><a href="#" class="btn btn-success">for</a></li>
+                        <li id="question2Answer2"><a href="#" class="btn btn-success">while</a></li>
+                        <li id="question2Answer3"><a href="#" class="btn btn-success">for-which</a></li>
+                        <li id="question2Answer4"><a href="#" class="btn btn-success">do-while</a></li>
+                    </ol>
+                </div>
+         </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="question3">
+            <div class="card">
+                <div class="card-body">
+                    <h1> Question Three</h1>
+                    <p>What is an undefined value in JavaScript?</p>
+                    <ol>
+                        <li id="question3Answer1"><a href="#" class="btn btn-success">Variable used in code doesn't exist</a></li>
+                        <li id="question3Answer2"><a href="#" class="btn btn-success">Variable is not assigned to any value</a></li>
+                        <li id="question3Answer3"><a href="#" class="btn btn-success">Property doesn't exist</a></li>
+                        <li id="question3Answer4"><a href="#" class="btn btn-success">All of the above</a></li>
+                    </ol>
+                </div>
+         </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="question4">
+            <div class="card">
+                <div class="card-body">
+                    <h1> Question Four</h1>
+                    <p>JavaScript code is written inside a file having the extension: </p>
+                    <ol>
+                        <li id="question4Answer1"><a href="#" class="btn btn-success">.javascript</a></li>
+                        <li id="question4Answer2"><a href="#" class="btn btn-success">.jvs</a></li>
+                        <li id="question4Answer3"><a href="#" class="btn btn-success">.js</a></li>
+                        <li id="question4Answer4"><a href="#" class="btn btn-success">.jsc</a></li>
+                    </ol>
+                </div>
+         </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="question5">
+            <div class="card">
+                <div class="card-body">
+                    <h1> Question Five</h1>
+                    <p>Which operator is used to assign a value to a variable?</p>
+                    <ol>
+                        <li id="question5Answer1"><a href="#" class="btn btn-success">+</a></li>
+                        <li id="question5Answer2"><a href="#" class="btn btn-success">=</a></li>
+                        <li id="question5Answer3"><a href="#" class="btn btn-success">x</a></li>
+                        <li id="question5Answer4"><a href="#" class="btn btn-success">*</a></li>
+                    </ol>
+                </div>
+         </div>
+        </div>
+    </div>
+</body>
+</html>
