@@ -1,0 +1,8 @@
+
+/*style to hide elements at start up*/
+.question {
+    display: none;
+}
+#finish-screen {
+    display: none;
+}
