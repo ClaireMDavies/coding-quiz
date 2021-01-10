@@ -6,3 +6,8 @@
 #finish-screen {
     display: none;
 }
+
+li
+{
+    margin: 5px;
+}

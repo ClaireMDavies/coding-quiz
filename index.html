@@ -19,6 +19,8 @@
         <div class="row">
             <div class="col-sm-3">
                 <h6>Hi Scores</h6>
+                <div id="hi-score"></div>
+                <a href="#" class="btn btn-success" id="clear">clear</a>
             </div>
             <div class="col-sm-6">
                 <div class="start-quiz">
@@ -30,62 +32,62 @@
                                 <a href="#" class="btn btn-success" id="start">Start Quiz</a>
                             </div>
                             <div class="question" id="question1">
-                                <h1> Question One</h1>
+                                <h1>Question One</h1>
                                 <p>What are the types of pop up boxes available in JavaScript?</p>
                                 <ol>
-                                    <li id="question1Answer1"><a href="#" class="btn btn-success">Alert</a></li>
-                                    <li id="question1Answer2"><a href="#" class="btn btn-success">Prompt</a></li>
-                                    <li id="question1Answer3"><a href="#" class="btn btn-success">Confirm</a></li>
-                                    <li id="question1Answer4"><a href="#" class="btn btn-success">All of the above</a></li>
+                                    <li><a id="question1Answer1" href="#" class="btn btn-success answer">Alert</a></li>
+                                    <li><a id="question1Answer2" href="#" class="btn btn-success answer">Prompt</a></li>
+                                    <li><a id="question1Answer3" href="#" class="btn btn-success answer">Confirm</a></li>
+                                    <li><a id="question1Answer4" href="#" class="btn btn-success answer">All of the above</a></li>
                                 </ol>
                             </div>
                             <div class="question" id="question2">
-                                <h1> Question Two</h1>
+                                <h1>Question Two</h1>
                                 <p>Which of these is not a looping structure in JavaScript?</p>
                                 <ol>
-                                    <li id="question2Answer1"><a href="#" class="btn btn-success">for</a></li>
-                                    <li id="question2Answer2"><a href="#" class="btn btn-success">while</a></li>
-                                    <li id="question2Answer3"><a href="#" class="btn btn-success">for-which</a></li>
-                                    <li id="question2Answer4"><a href="#" class="btn btn-success">do-while</a></li>
+                                    <li><a id="question2Answer1" href="#" class="btn btn-success answer">for</a></li>
+                                    <li><a id="question2Answer2" href="#" class="btn btn-success answer">while</a></li>
+                                    <li><a id="question2Answer3" href="#" class="btn btn-success answer">for-which</a></li>
+                                    <li><a id="question2Answer4" href="#" class="btn btn-success answer">do-while</a></li>
                                 </ol>
                             </div>
                             <div class="question" id="question3">
-                                <h1> Question Three</h1>
+                                <h1>Question Three</h1>
                                 <p>What is an undefined value in JavaScript?</p>
                                 <ol>
-                                    <li id="question3Answer1"><a href="#" class="btn btn-success">Variable used in code doesn't exist</a></li>
-                                    <li id="question3Answer2"><a href="#" class="btn btn-success">Variable is not assigned to any value</a></li>
-                                    <li id="question3Answer3"><a href="#" class="btn btn-success">Property doesn't exist</a></li>
-                                    <li id="question3Answer4"><a href="#" class="btn btn-success">All of the above</a></li>
+                                    <li><a id="question3Answer1" href="#" class="btn btn-success answer">Variable used in code doesn't exist</a></li>
+                                    <li><a id="question3Answer2" href="#" class="btn btn-success answer">Variable is not assigned to any value</a></li>
+                                    <li><a id="question3Answer3" href="#" class="btn btn-success answer">Property doesn't exist</a></li>
+                                    <li><a id="question3Answer4" href="#" class="btn btn-success answer">All of the above</a></li>
                                 </ol>
                             </div>
                             <div class="question" id="question4">
-                                <h1> Question Four</h1>
+                                <h1>Question Four</h1>
                                 <p>JavaScript code is written inside a file having the extension: </p>
                                 <ol>
-                                    <li id="question4Answer1"><a href="#" class="btn btn-success">.javascript</a></li>
-                                    <li id="question4Answer2"><a href="#" class="btn btn-success">.jvs</a></li>
-                                    <li id="question4Answer3"><a href="#" class="btn btn-success">.js</a></li>
-                                    <li id="question4Answer4"><a href="#" class="btn btn-success">.jsc</a></li>
+                                    <li><a id="question4Answer1" href="#" class="btn btn-success answer">.javascript</a></li>
+                                    <li><a id="question4Answer2" href="#" class="btn btn-success answer">.jvs</a></li>
+                                    <li><a id="question4Answer3" href="#" class="btn btn-success answer">.js</a></li>
+                                    <li><a id="question4Answer4" href="#" class="btn btn-success answer">.jsc</a></li>
                                 </ol>
                             </div>
                             <div class="question" id="question5">
-                                <h1> Question Five</h1>
+                                <h1>Question Five</h1>
                                 <p>Which operator is used to assign a value to a variable?</p>
                                 <ol>
-                                    <li id="question5Answer1"><a href="#" class="btn btn-success">+</a></li>
-                                    <li id="question5Answer2"><a href="#" class="btn btn-success">=</a></li>
-                                    <li id="question5Answer3"><a href="#" class="btn btn-success">x</a></li>
-                                    <li id="question5Answer4"><a href="#" class="btn btn-success">*</a></li>
+                                    <li><a id="question5Answer1" href="#" class="btn btn-success answer">+</a></li>
+                                    <li><a id="question5Answer2" href="#" class="btn btn-success answer">=</a></li>
+                                    <li><a id="question5Answer3" href="#" class="btn btn-success answer">x</a></li>
+                                    <li><a id="question5Answer4" href="#" class="btn btn-success answer">*</a></li>
                                 </ol>
                             </div>
                             <div id="finish-screen">
-                                <h1>Well Done!</h1>
+                                <h1>All Done!</h1>
                                 <p>Please add your initials below to log your score to the hi score board</p>
                                 <form class="row g-3">
                                     <div class="col-auto">
                                       <label for="yourscore" class="visually-hidden">score</label>
-                                      <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Your Score">
+                                      <input type="text" readonly class="form-control-plaintext" id="yourscore" value="Your Score">
                                     </div>
                                     <div class="col-auto">
                                       <label for="inputPassword2" class="visually-hidden">initials</label>
