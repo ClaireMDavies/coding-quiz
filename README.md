@@ -26,3 +26,11 @@ I chose to store the intials and score value as objects in an array, each time a
 
 ## The finished work
 
+The live site is found at [GitHubPages]: (https://clairemdavies.github.io/week-05-code-quiz-homework/)
+
+Screenshots of the pages that outline the progression of the quiz are as follows: <br>
+![code-quiz.png](assets/code-quiz.png) <br>
+![code-quiz-question](assets\code-quiz-question.png) <br>
+![code-quiz-score](assets/code-quiz-score.png) <br>
+![code-quiz-outoftime](assets/code-quiz-outoftime.png) <br>
+![code-quiz-hiscore](assets/code-quiz-hiscore.png) <br>
