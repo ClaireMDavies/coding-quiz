@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="code-quiz.css">
     <!--bootstrap link added-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!--Jquery link added-->
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <!--javascript link added-->
     <script type="text/javascript" src="code-quiz.js"></script>
     <title>Code Quiz</title>
 </head>
+
 <body>
     <!--Setting up the grid structure for page-->
     <div class="container">
@@ -23,7 +26,7 @@
 
                     <ol id="score-list"></ol>
                 </div>
-                
+
                 <a href="#" class="btn btn-success" id="clear">clear</a>
             </div>
             <div class="col-sm-6">
@@ -32,7 +35,9 @@
                         <div class="card-body">
                             <div id="start-screen">
                                 <h1 class="card-title">Coding Quiz Challenge</h1>
-                                <p class="card-text">Click "start quiz" to answer 5 multiple choice questions, your score is the countdown timer, which has 10 seconds deducted for each wrong answer, the quiz is over when you have answered all questions or run out of time.</p>
+                                <p class="card-text">Click "start quiz" to answer 5 multiple choice questions, your
+                                    score is the countdown timer, which has 10 seconds deducted for each wrong answer,
+                                    the quiz is over when you have answered all questions or run out of time.</p>
                                 <a href="#" class="btn btn-success" id="start">Start Quiz</a>
                             </div>
                             <div class="question" id="question1">
@@ -88,20 +93,15 @@
                             <div id="finish-screen">
                                 <h1>Well Done!</h1>
                                 <p>Please add your initials below to log your score to the hi score board</p>
-                                <form class="row g-3">
-                                    <div class="col-auto">
-                                      <label for="yourscore" class="visually-hidden">score</label>
-                                      <input type="text" readonly class="form-control-plaintext" id="yourscore">
-                                    </div>
-                                    <div class="col-auto">
-                                      <label for="inputPassword2" class="visually-hidden">initials</label>
-                                      <input type="text" class="form-control" id="input-initials" placeholder="Initials">
-                                    </div>
-                                    <div class="col-auto">
-                                      <button id="submit-score" class="btn btn-success mb-3">submit score</button>
-                                    </div>
-                                  </form>
-
+                                <div>
+                                    <input type="text" readonly class="form-control-plaintext" id="yourscore">
+                                </div>
+                                <div>
+                                    <input type="text" class="form-control" id="input-initials" placeholder="Initials" maxlength="5">
+                                </div>
+                                <div>
+                                    <a href="#" class="btn btn-success" id="submit-score">submit score</a>
+                                </div>
                             </div>
                             <div id="out-of-time">
                                 <h1 class="card-title">Sorry you ran out of time</h1>
@@ -118,7 +118,8 @@
             </div>
         </div>
     </div>
-    
-    
+
+
 </body>
+
 </html>

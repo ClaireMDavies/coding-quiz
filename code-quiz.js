@@ -37,8 +37,8 @@ $(document).ready(function()
                 clearInterval(interval);
                 $("#finish-screen").css("display", "block");
 
-                // store the score
-                $("#yourscore").attr("value", remainingSeconds);
+                // display the score
+                $("#yourscore").attr("value", remainingSeconds + " seconds");
             }
         }
         else
@@ -66,10 +66,11 @@ $(document).ready(function()
             }
         }
     });
+
     //pushes data from input fields into the hi score list
     $("#submit-score").click(function() {
         
-        var highScoreEntry = { initials: $("#input-initials").val(), score: $("#yourscore").val() };
+        var highScoreEntry = { initials: $("#input-initials").val(), score: remainingSeconds };
         highScores.push(highScoreEntry);
 
         displayScores();
@@ -103,7 +104,6 @@ function countdown() {
         $("#timer").text(remainingSeconds);
     }
 }
-
 
 
 //resetting quiz and resetting variables
