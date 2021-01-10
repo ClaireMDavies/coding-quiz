@@ -19,7 +19,11 @@
         <div class="row">
             <div class="col-sm-3">
                 <h6>Hi Scores</h6>
-                <div id="hi-score"></div>
+                <div id="hi-score">
+
+                    <ol id="score-list"></ol>
+                </div>
+                
                 <a href="#" class="btn btn-success" id="clear">clear</a>
             </div>
             <div class="col-sm-6">
@@ -82,22 +86,27 @@
                                 </ol>
                             </div>
                             <div id="finish-screen">
-                                <h1>All Done!</h1>
+                                <h1>Well Done!</h1>
                                 <p>Please add your initials below to log your score to the hi score board</p>
                                 <form class="row g-3">
                                     <div class="col-auto">
                                       <label for="yourscore" class="visually-hidden">score</label>
-                                      <input type="text" readonly class="form-control-plaintext" id="yourscore" value="Your Score">
+                                      <input type="text" readonly class="form-control-plaintext" id="yourscore">
                                     </div>
                                     <div class="col-auto">
                                       <label for="inputPassword2" class="visually-hidden">initials</label>
-                                      <input type="initials" class="form-control" id="inputInitials" placeholder="Initials">
+                                      <input type="text" class="form-control" id="input-initials" placeholder="Initials">
                                     </div>
                                     <div class="col-auto">
-                                      <button type="submit" class="btn btn-success mb-3">submit score</button>
+                                      <button id="submit-score" class="btn btn-success mb-3">submit score</button>
                                     </div>
                                   </form>
 
+                            </div>
+                            <div id="out-of-time">
+                                <h1 class="card-title">Sorry you ran out of time</h1>
+                                <p class="card-text">I'm afraid you weren't able to complete the quiz, but you can click the button and try again</p>
+                                <a href="#" class="btn btn-success" id="try-again">Try again</a>
                             </div>
                         </div>
                     </div>

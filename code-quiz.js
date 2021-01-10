@@ -1,25 +1,9 @@
 //creating global variables necessary for the following functions
-var interval = setInterval(countdown, 1000);
-const minSeconds = 0;
-var elapsedSeconds = 75;
+var interval;
+var remainingSeconds = 75;
 var correctAnswers = ["question1Answer4", "question2Answer3", "question3Answer4", "question4Answer3", "question5Answer2"];
 var currentQuestionNumber = 1
-
-//coundown timer and initiating end screen
-function countdown() {
-    if (elapsedSeconds <= minSeconds) {
-        $(".question").css("display", "none");
-
-        $("#finish-screen").css("display", "block");
-        clearInterval(interval);
-
-        $("#timer").text("0");
-    }
-    else {
-        --elapsedSeconds;
-        $("#timer").text(elapsedSeconds);
-    }
-}
+var highScores = [];
 
 
 $(document).ready(function()
@@ -27,7 +11,9 @@ $(document).ready(function()
     $("#start").click(function () {
         $("#start-screen").css("display", "none");
         $("#question" + currentQuestionNumber).css("display", "block");
-        countdown(interval);
+        
+        interval = setInterval(countdown, 1000);
+        
     });
 
     $(".answer").click(function () {
@@ -47,50 +33,113 @@ $(document).ready(function()
             }
             else
             {
+                // that was the last question
                 clearInterval(interval);
                 $("#finish-screen").css("display", "block");
+
+                // store the score
+                $("#yourscore").attr("value", remainingSeconds);
             }
         }
         else
         {
             // answer is wrong
 
-            if (elapsedSeconds < 10)
+            if (remainingSeconds < 10)
             {
-                elapsedSeconds = 0;
+                remainingSeconds = 0;
             }
             else
             {
                 //deduct time for wrong answer
-                elapsedSeconds -= 10;
-                $("#timer").text(elapsedSeconds);
-                $("#question" + currentQuestionNumber).css("display", "none");
-                ++currentQuestionNumber;
+
+                remainingSeconds -= 10;
+                $("#timer").text(remainingSeconds);
+
+                if (remainingSeconds <= 0)
+                {
+                    ranOutOfTime();
+                }
+                 
+                $("#question" + currentQuestionNumber).css("display", "block");
                 
-                if (currentQuestionNumber <= correctAnswers.length)
-            {
-                // next question
-                $("#question" + currentQuestionNumber).css("display", "block");
-            }
-            else
-            {
-                clearInterval(interval);
-                $("#finish-screen").css("display", "block");
-            } 
-                $("#question" + currentQuestionNumber).css("display", "block");
             }
         }
     });
+    //pushes data from input fields into the hi score list
+    $("#submit-score").click(function() {
+        
+        var highScoreEntry = { initials: $("#input-initials").val(), score: $("#yourscore").val() };
+        highScores.push(highScoreEntry);
+
+        displayScores();
+        resetQuiz();
+    });
+    
+    //clear the hi scores
+    $("#clear").click(function(){
+        highScores = [];
+        displayScores();
+    });
+
+    //option to try again
+    $("#try-again").click(function() {
+        
+        resetQuiz();
+    });
 });
 
+// coundown timer and initiating end screen
+function countdown() {
+
+    if (remainingSeconds <= 0) {
+
+        // timer has run out
+
+        ranOutOfTime();
+    }
+    else {
+        --remainingSeconds;
+        $("#timer").text(remainingSeconds);
+    }
+}
 
 
 
+//resetting quiz and resetting variables
+function resetQuiz(){
+    $("#finish-screen").css("display", "none");
+    $("#out-of-time").css("display", "none");
+    $("#start-screen").css("display", "block");
+    currentQuestionNumber = 1;        
+    remainingSeconds = 75;        
+    $("#timer").text(remainingSeconds);
+}
 
+//When timer gets to zero, intiates different end screen
+function ranOutOfTime(){
+    $(".question").css("display", "none");
 
+    $("#finish-screen").css("display", "none");
+    $("#out-of-time").css("display", "block");
 
+    clearInterval(interval);
 
+    $("#timer").text("0");
+    
+}
 
-//function to record hi score
+function displayScores(){
 
+    highScores = highScores.sort(function(a, b){
+        return b.score - a.score;
+    });
+
+    $("#score-list").empty();
+
+    for (var i=0; i < highScores.length; i++)
+    {
+        $("#score-list").append("<li>" + highScores[i].initials + "=" + highScores[i].score + "</li>");
+    }
+};
 

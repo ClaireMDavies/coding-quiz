@@ -7,6 +7,10 @@
     display: none;
 }
 
+#out-of-time {
+    display: none;
+}
+
 li
 {
     margin: 5px;
